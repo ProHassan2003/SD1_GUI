@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+
+	<Package Name="StudentGradesGui" Manufacturer="VVK" Version="1.0.0"
+			 UpgradeCode="84dc876e-3a79-427e-8b28-4cabd454a83b">
+		<MediaTemplate />
+
+		<StandardDirectory Id="ProgramFilesFolder">
+			<Directory Id="VVKDIR" Name="VVK">
+				<Directory Id="INSTALLFOLDER" Name="Hassan Jahangir" />
+			</Directory>
+		</StandardDirectory>
+
+		<DirectoryRef Id="INSTALLFOLDER">
+			<Component Id="MainExeComponent" Guid="*">
+				<File Id="MainExe" Source="..\x64\Release\StudentGradesGui.exe" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+
+		<Feature Id="MainFeature" Title="StudentGradesGui" Level="1">
+			<ComponentRef Id="MainExeComponent" />
+		</Feature>
+	</Package>
+
+</Wix>
