@@ -1,0 +1,21 @@
+# Visual Studio
+.vs/
+Debug/
+Release/
+x64/
+*.user
+*.aps
+UpgradeLog.htm
+
+# Build outputs
+*.obj
+*.pdb
+*.ilk
+*.tlog
+*.idb
+*.opendb
+
+# Installer outputs
+*.msi
+*.cab
+*.wixpdb
